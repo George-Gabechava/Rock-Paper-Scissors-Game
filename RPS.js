@@ -76,10 +76,27 @@
             }
           }
 
-        let FinalScore = (`Final Score: ${wins}W ${losses}L ${ties}T`);
+        let FinalScore = (`Final Score: ${wins}W ${losses}L ${ties}T `);
         document.write(FinalScore);
+
+        console.log(wins);
+
+        
+        if (wins > 2) {
+            document.write("   ...Well done!")
+        }
+        else if (wins > 0) {
+            document.write("   ...I've seen better.")
+        }            
+        else {
+               document.write("   ...No wins? Did you even try?")
+        }
+        
         alert(FinalScore);
 
+
+        
+        
         
 
     }
