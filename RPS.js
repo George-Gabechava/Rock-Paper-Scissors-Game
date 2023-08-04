@@ -11,7 +11,7 @@
 
     // Ask user for their value of RPS. Text input. Case-insensitive.
     function getPlayerChoice() {
-        const playerSelection = prompt('Play 5 rounds! Type rock, paper, or scissor!').toLowerCase();
+        //const playerSelection = prompt('Play 5 rounds! Type rock, paper, or scissor!').toLowerCase();
 
         if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissor') {
             return playerSelection;
