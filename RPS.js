@@ -48,7 +48,114 @@
     }
 
 
+    const btnRock = document.getElementById('btnRock');
+    btnRock.addEventListener('click', function() {
+        compChoice = getComputerChoice();
+        outcome = playRound('rock',compChoice);
+
+        if (outcome == 'Win') {
+            playerScore += 1;
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} You Won!`;
+            if (playerScore == 5) {
+                score.textContent = `Congrats! You defeated the computer. How about another go?`
+                playerScore = 0;
+                computerScore = 0;
+            }
+
+        }
+        else if (outcome == 'Lose') {
+            computerScore += 1;
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} You Lost!`;
+            if (computerScore == 5) {
+                score.textContent = `Sorry! You lost to the computer. How about chance at it?`
+                playerScore = 0;
+                computerScore = 0;
+            }
+
+        }
+        else {
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} Tie!`;
+            return;
+        }
+
+    });
+
+    const btnPaper = document.getElementById('btnPaper');
+    btnPaper.addEventListener('click', function() {
+        compChoice = getComputerChoice();
+        outcome = playRound('paper',compChoice);
+
+        if (outcome == 'Win') {
+            playerScore += 1;
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} You Won!`;
+            if (playerScore == 5) {
+                score.textContent = `Congrats! You defeated the computer. How about another go?`
+                playerScore = 0;
+                computerScore = 0;
+            }
+
+        }
+        else if (outcome == 'Lose') {
+            computerScore += 1;
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} You Lost!`;
+            if (computerScore == 5) {
+                score.textContent = `Sorry! You lost to the computer. How about chance at it?`
+                playerScore = 0;
+                computerScore = 0;
+            }
+
+        }
+        else {
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} Tie!`;
+            return;
+        }
+    });
+
+    const btnScissor = document.getElementById('btnScissor');
+    btnScissor.addEventListener('click', function() {
+        compChoice = getComputerChoice();
+        outcome = playRound('scissor',compChoice);
+        //console.log(outcome);
+        if (outcome == 'Win') {
+            playerScore += 1;
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} You Won!`;
+            if (playerScore == 5) {
+                score.textContent = `Congrats! You defeated the computer. How about another go?`
+                playerScore = 0;
+                computerScore = 0;
+            }
+
+        }
+        else if (outcome == 'Lose') {
+            computerScore += 1;
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} You Lost!`;
+            if (computerScore == 5) {
+                score.textContent = `Sorry! You lost to the computer. How about chance at it?`
+                playerScore = 0;
+                computerScore = 0;
+            }
+
+        }
+        else {
+            score.textContent = `Current Score: ${playerScore} : ${computerScore} Tie!`;
+            return;
+        }
+        //console.log(playerScore);
+
+    });
+
+    var playerScore = 0;
+    var computerScore = 0;
+
+    const score = document.getElementById('score');
+    score.classList.add('score');
+    score.textContent = `First player to 5 points wins.`;
+
+
+
+
     //play a 5 round game with inputs.
+    /*
     function game() {
         let wins = 0;
         let losses = 0;
@@ -92,18 +199,14 @@
                document.write("   ...No wins? Did you even try?")
         }
         
-        alert(FinalScore);
-
-
-        
-        
-        
+        alert(FinalScore);      
 
     }
 
+
     game();
 
-
+*/
 
 
 
